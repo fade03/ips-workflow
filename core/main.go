@@ -14,7 +14,7 @@ func init() {
 }
 
 func main() {
-	wildcardPath := filepath.Join(homeDir, "/Library/Application Support/JetBrains/IntelliJIdea*/options/recentProjects.xml")
+	wildcardPath := filepath.Join(homeDir, "Library/Application Support/JetBrains/IntelliJIdea*/options/recentProjects.xml")
 
 	xmlPaths, err := filepath.Glob(wildcardPath)
 	if err != nil {
