@@ -2,7 +2,11 @@ An Alfred workflow to list IntelliJ IDEA recent opened projects.
 
 Requirements: Go and Alfred Powerpack.
 
-The storage file of IDEA's recently opened project is `$HOME/Library/Application Support/JetBrains/IntelliJIdea*/options/recentProjects.xml` , this program will parse this file and output it in alfred.
+The storage file of IDEA's recently opened project is 
+```
+$HOME/Library/Application Support/JetBrains/IntelliJIdea*/options/recentProjects.xml
+```
+this program will parse this file and output it in alfred.
 
 Download the `ips.alfredworkflow` and import it to alfred
 
