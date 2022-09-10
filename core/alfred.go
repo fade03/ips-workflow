@@ -2,6 +2,7 @@ package main
 
 import (
 	"os"
+	"path/filepath"
 	"strings"
 )
 
@@ -24,8 +25,9 @@ func parseItems(a *Application, items []*Item) []*Item {
 		} else {
 			for _, entry := range option.Omaps.Entries {
 				if realPath, isExist := getRealPath(entry.Key); isExist {
+					_, projectName := filepath.Split(realPath)
 					items = append(items, &Item{
-						Title: "Recent Opened Project",
+						Title: projectName,
 						Subtitle: realPath,
 						Arg: realPath,
 					})
