@@ -12,6 +12,10 @@ Download the `ips.alfredworkflow` and import it to alfred
 
 ![ips.png](./doc/ips.png)
 
+`ips ${name}` will search all projects to list projects whose name contains `${name}`
+
+![search.png](./doc/search.png)
+
 choose a project and press ↩, the project will be opened by IDEA.
 
 Only IntelliJ IDEA is supported so far, if you need other JetBrains IDE's support, welcome issue :)

@@ -12,6 +12,8 @@ type Item struct {
 	Arg      string `json:"arg"`
 }
 
+type Items []*Item
+
 func parseItems(a *Application, items []*Item) []*Item {
 	for _, option := range a.Component.Options {
 		if option.Name == "lastOpenedProject" {
