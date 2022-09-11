@@ -16,7 +16,7 @@ var (
 
 func init() {
 	homeDir, _ = os.UserHomeDir()
-	flag.StringVar(&nameSearch, "name", "", "-")
+	flag.StringVar(&nameSearch, "name", "", "...")
 	flag.Parse()
 }
 
@@ -26,10 +26,6 @@ func main() {
 	xmlPaths, err := filepath.Glob(wildcardPath)
 	if err != nil {
 		fmt.Println(err)
-		return
-	}
-
-	if len(xmlPaths) <= 0 {
 		return
 	}
 

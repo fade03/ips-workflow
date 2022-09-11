@@ -25,7 +25,7 @@ func parseItems(a *Application, items []*Item) []*Item {
 				})	
 			}
 		} else {
-			for _, entry := range option.Omaps.Entries {
+			for _, entry := range option.Maps.Entries {
 				if realPath, isExist := getRealPath(entry.Key); isExist {
 					_, projectName := filepath.Split(realPath)
 					items = append(items, &Item{

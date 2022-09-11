@@ -16,10 +16,6 @@ Download the `ips.alfredworkflow` and import it to alfred
 
 ![search.png](./doc/search.png)
 
-choose a project and press ↩, the project will be opened by IDEA.
+choose a project and press ↩, it will be opened by IDEA.
 
 Only IntelliJ IDEA is supported now, if you need other JetBrains IDE's support, welcome issue :)
-
-
-
-

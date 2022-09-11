@@ -16,12 +16,12 @@ type Component struct {
 }
 
 type Option struct {
-	Omaps *_Map `xml:"map"`
+	Maps *Map `xml:"map"`
 	Name  string  `xml:"name,attr"`
 	Value string  `xml:"value,attr"`
 }
 
-type _Map struct {
+type Map struct {
 	Entries []*Entry `xml:"entry"`
 }
 
