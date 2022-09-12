@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"os"
 	"path/filepath"
 	"strings"
@@ -14,7 +15,7 @@ type Item struct {
 
 type Items []*Item
 
-func parseItems(a *Application, items []*Item) []*Item {
+func parseAndSave(a *Application, items []*Item, writer *bufio.Writer) []*Item {
 	for _, option := range a.Component.Options {
 		if option.Name == "lastOpenedProject" {
 			if realPath, isExist := getRealPath(option.Value); isExist {
@@ -33,6 +34,8 @@ func parseItems(a *Application, items []*Item) []*Item {
 						Subtitle: realPath,
 						Arg: realPath,
 					})
+					// write to file
+					writer.WriteString(realPath + "\n")
 				}
 			}
 		}
