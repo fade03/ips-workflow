@@ -16,9 +16,9 @@ type Component struct {
 }
 
 type Option struct {
-	Maps *Map `xml:"map"`
-	Name  string  `xml:"name,attr"`
-	Value string  `xml:"value,attr"`
+	Maps  *Map   `xml:"map"`
+	Name  string `xml:"name,attr"`
+	Value string `xml:"value,attr"`
 }
 
 type Map struct {

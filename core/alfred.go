@@ -20,19 +20,19 @@ func parseAndSave(a *Application, items []*Item, writer *bufio.Writer) []*Item {
 		if option.Name == "lastOpenedProject" {
 			if realPath, isExist := getRealPath(option.Value); isExist {
 				items = append(items, &Item{
-					Title: "Last Opened Project",
+					Title:    "Last Opened Project",
 					Subtitle: realPath,
-					Arg: realPath,
-				})	
+					Arg:      realPath,
+				})
 			}
 		} else {
 			for _, entry := range option.Maps.Entries {
 				if realPath, isExist := getRealPath(entry.Key); isExist {
 					_, projectName := filepath.Split(realPath)
 					items = append(items, &Item{
-						Title: projectName,
+						Title:    projectName,
 						Subtitle: realPath,
-						Arg: realPath,
+						Arg:      realPath,
 					})
 					// write to file
 					writer.WriteString(realPath + "\n")
@@ -49,6 +49,6 @@ func getRealPath(path string) (string, bool) {
 	if _, err := os.Stat(realPath); os.IsNotExist(err) {
 		return "", false
 	}
-	
+
 	return realPath, true
 }
